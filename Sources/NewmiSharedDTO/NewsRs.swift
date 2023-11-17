@@ -8,6 +8,14 @@
 import Foundation
 
 public struct NewsRs:Codable{
+    public var news:[News]?
+    
+    public init(news: [News]? = nil) {
+        self.news = news
+    }
+}
+
+public struct News:Codable{
     public var title:String?
     public var date:String?
     public var url:String?
