@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct SourcesRs{
+public struct SourcesRs:Codable{
     public var sources:[Source]?
     
     public init(sources: [Source]? = nil) {
@@ -15,7 +15,7 @@ public struct SourcesRs{
     }
 }
 
-public struct Source{
+public struct Source:Codable{
     public var id:UUID?
     public var name:String?
     public var language:String?
