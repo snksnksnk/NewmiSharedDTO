@@ -6,3 +6,23 @@
 //
 
 import Foundation
+
+public struct CategoriesRs:Codable{
+    public var categories:[Category]?
+    
+    public init(categories: [Category]? = nil) {
+        self.categories = categories
+    }
+}
+
+public struct Category:Codable{
+    public var id:UUID?
+    public var name:String?
+    public var categoryCode:String?
+    
+    public init(id: UUID? = nil, name: String? = nil, categoryCode: String? = nil) {
+        self.id = id
+        self.name = name
+        self.categoryCode = categoryCode
+    }
+}
