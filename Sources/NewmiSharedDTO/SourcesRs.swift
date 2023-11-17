@@ -16,12 +16,12 @@ public struct SourcesRs{
 }
 
 public struct Source{
-    var id:UUID?
-    var name:String?
-    var language:String?
-    var countryCode:String?
+    public var id:UUID?
+    public var name:String?
+    public var language:String?
+    public var countryCode:String?
     
-    init(id: UUID? = nil, name: String? = nil, language: String? = nil, countryCode: String? = nil) {
+    public init(id: UUID? = nil, name: String? = nil, language: String? = nil, countryCode: String? = nil) {
         self.id = id
         self.name = name
         self.language = language
