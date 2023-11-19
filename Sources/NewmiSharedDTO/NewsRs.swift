@@ -25,8 +25,9 @@ public struct News:Codable{
     public var categories:String?
     public var imageUrl:String?
     public var videoUrl:String?
+    public var similar:[News]?
     
-    public init(title: String? = nil, date: String? = nil, dateTime:Date? = nil, url: String? = nil, source: String? = nil, newsType: String? = nil, categories: String? = nil, imageUrl: String? = nil, videoUrl: String? = nil) {
+    public init(title: String? = nil, date: String? = nil, dateTime:Date? = nil, url: String? = nil, source: String? = nil, newsType: String? = nil, categories: String? = nil, imageUrl: String? = nil, videoUrl: String? = nil, similar:[News]? = nil) {
         self.title = title
         self.date = date
         self.dateTime = dateTime
@@ -36,5 +37,6 @@ public struct News:Codable{
         self.categories = categories
         self.imageUrl = imageUrl
         self.videoUrl = videoUrl
+        self.similar = similar
     }
 }
