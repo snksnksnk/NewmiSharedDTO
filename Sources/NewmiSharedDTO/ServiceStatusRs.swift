@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct ServiceRq:Codable{
+public struct ServiceStatusRs:Codable{
     public var enabled:Bool?
     
     public init(enabled: Bool? = nil) {
