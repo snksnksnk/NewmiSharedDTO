@@ -34,3 +34,9 @@ import Foundation
  ALTER TABLE public.sources
  DROP COLUMN source
  */
+
+
+//Migrations
+
+//heroku run Run -- migrate --env production
+//heroku run Run -- migrate --revert  --env production
