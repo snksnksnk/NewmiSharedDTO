@@ -16,6 +16,7 @@ public struct NewsRs:Codable{
 }
 
 public struct News:Codable{
+    public var id:String?
     public var title:String?
     public var date:String?
     public var dateTime:Date?
@@ -27,7 +28,8 @@ public struct News:Codable{
     public var videoUrl:String?
     public var similar:[News]?
     
-    public init(title: String? = nil, date: String? = nil, dateTime:Date? = nil, url: String? = nil, source: String? = nil, newsType: String? = nil, categories: String? = nil, imageUrl: String? = nil, videoUrl: String? = nil, similar:[News]? = nil) {
+    public init(id:String? = nil, title: String? = nil, date: String? = nil, dateTime:Date? = nil, url: String? = nil, source: String? = nil, newsType: String? = nil, categories: String? = nil, imageUrl: String? = nil, videoUrl: String? = nil, similar:[News]? = nil) {
+        self.id = id
         self.title = title
         self.date = date
         self.dateTime = dateTime
