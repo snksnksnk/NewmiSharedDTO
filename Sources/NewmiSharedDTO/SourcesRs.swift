@@ -15,7 +15,11 @@ public struct SourcesRs:Codable{
     }
 }
 
-public struct Source:Codable{
+public struct Source:Codable,Hashable{
+    public static func == (lhs: Source, rhs: Source) -> Bool {
+        lhs.id == rhs.id
+    }
+    
     public var id:UUID?
     public var name:String?
     public var language:String?
