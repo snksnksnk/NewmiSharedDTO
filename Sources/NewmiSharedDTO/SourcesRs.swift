@@ -21,12 +21,14 @@ public struct Source:Codable{
     public var language:String?
     public var countryCode:String?
     public var sourceCode:String?
+    public var isSelected:Bool?
     
-    public init(id: UUID? = nil, name: String? = nil, language: String? = nil, countryCode: String? = nil, sourceCode:String? = nil) {
+    public init(id: UUID? = nil, name: String? = nil, language: String? = nil, countryCode: String? = nil, sourceCode:String? = nil, isSelected:Bool? = nil) {
         self.id = id
         self.name = name
         self.language = language
         self.countryCode = countryCode
         self.sourceCode = sourceCode
+        self.isSelected = isSelected
     }
 }
