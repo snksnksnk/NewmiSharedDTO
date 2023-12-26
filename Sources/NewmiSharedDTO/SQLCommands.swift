@@ -40,3 +40,9 @@ import Foundation
 
 //heroku run Run -- migrate --env production
 //heroku run Run -- migrate --revert  --env production
+
+
+//local Migrations
+//swift run Run migrate
+//swift run Run migrate --revert
+
