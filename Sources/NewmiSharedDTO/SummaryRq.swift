@@ -8,9 +8,9 @@
 import Foundation
 
 public struct SummaryRq:Codable{
-    public var articleIds:[UUID]?
+    public var articleIds:[String]?
     
-    public init(articleIds: [UUID]? = nil) {
+    public init(articleIds: [String]? = nil) {
         self.articleIds = articleIds
     }
 }
