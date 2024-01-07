@@ -19,12 +19,14 @@ public struct Category:Codable{
     public var id:UUID?
     public var name:String?
     public var categoryCode:String?
+    public var generalCategory:String?
     public var isSelected:Bool?
     
-    public init(id: UUID? = nil, name: String? = nil, categoryCode: String? = nil, isSelected:Bool? = nil) {
+    public init(id: UUID? = nil, name: String? = nil, categoryCode: String? = nil, generalCategory:String? = nil, isSelected:Bool? = nil) {
         self.id = id
         self.name = name
         self.categoryCode = categoryCode
+        self.generalCategory = generalCategory
         self.isSelected = isSelected
     }
 }
