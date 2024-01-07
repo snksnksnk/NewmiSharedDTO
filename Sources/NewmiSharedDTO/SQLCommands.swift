@@ -46,3 +46,11 @@ import Foundation
 //swift run Run migrate
 //swift run Run migrate --revert
 
+//If [ WARNING ] bind(descriptor:ptr:bytes:): Address already in use (errno: 48)
+//Swift/ErrorType.swift:200: Fatal error: Error raised at top level: bind(descriptor:ptr:bytes:): Address already in use (errno: 48):
+//
+//Terminal:
+//1. lsof -i:8080
+//2. Take 5-digit number
+//3. kill -9 5-digit num
+//4. Verify with first command that returns nothing
