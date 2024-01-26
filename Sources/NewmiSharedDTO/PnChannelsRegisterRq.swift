@@ -11,11 +11,13 @@ import Foundation
 
 public struct PnChannelsRegisterRq:Codable{
     public var deviceIdentifier:String?
+    public var pnToken:String?
     public var channels:[String]?
     public var deviceOS:String?
     
-    public init(deviceIdentifier: String? = nil, channels:[String]? = nil, deviceOS:String? = nil) {
+    public init(deviceIdentifier: String? = nil, pnToken:String? = nil, channels:[String]? = nil, deviceOS:String? = nil) {
         self.deviceIdentifier = deviceIdentifier
+        self.pnToken = pnToken
         self.channels = channels
         self.deviceOS = deviceOS
     }
