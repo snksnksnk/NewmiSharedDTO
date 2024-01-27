@@ -8,9 +8,9 @@
 import Foundation
 
 public struct SummaryRs:Codable{
-    public var summary:[String]?
+    public var summary:String?
     
-    public init(summary: [String]? = nil) {
+    public init(summary: String? = nil) {
         self.summary = summary
     }
 }
