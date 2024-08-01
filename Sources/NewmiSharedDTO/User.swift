@@ -13,34 +13,34 @@ public struct User: Codable, Equatable {
     struct Credentials: Codable, Equatable {
 
         // MARK: - Properties
-        var email: String
-        var password: String
+        public var email: String
+        public var password: String
     }
     
     public struct Social: Codable, Equatable {
         
         // MARK: - Properties
-        let email: String
-        let userID: String
-        let identityToken: Data?
-        let authorizationCode: Data?
-        let nonce: String?
+        public let email: String
+        public let userID: String
+        public let identityToken: Data?
+        public let authorizationCode: Data?
+        public let nonce: String?
     }
 
     // MARK: - Authentication Subtype
     public struct Authentication: Codable, Equatable {
         
-        typealias AccessToken = String
-        typealias RefreshToken = String
+        public typealias AccessToken = String
+        public typealias RefreshToken = String
 
         // MARK: - Properties
-        let accessToken: AccessToken
-        let refreshToken: RefreshToken
-        let expiresIn: TimeInterval
-        let creationDate: Date
+        public let accessToken: AccessToken
+        public let refreshToken: RefreshToken
+        public let expiresIn: TimeInterval
+        public let creationDate: Date
 
         // MARK: - Initializer
-        init(accessToken: String, refreshToken: String, expiresIn: TimeInterval, creationDate: Date = Date()) {
+        public init(accessToken: String, refreshToken: String, expiresIn: TimeInterval, creationDate: Date = Date()) {
             self.accessToken = accessToken
             self.refreshToken = refreshToken
             self.expiresIn = expiresIn
@@ -48,11 +48,11 @@ public struct User: Codable, Equatable {
         }
 
         // MARK: - Interface
-        var expirationDate: Date {
+        public var expirationDate: Date {
             return creationDate.advanced(by: expiresIn)
         }
         
-        func isValid(on date: Date) -> Bool {
+        public func isValid(on date: Date) -> Bool {
             return expirationDate > date
         }
 
@@ -74,7 +74,7 @@ public struct User: Codable, Equatable {
     }
 
     // MARK: - Properties
-    let email: String
-    let appleUserID: String?
-    var authentication: Authentication
+    public let email: String
+    public let appleUserID: String?
+    public var authentication: Authentication
 }
