@@ -25,8 +25,16 @@ public struct User: Codable, Equatable {
         public let identityToken: Data?
         public let authorizationCode: Data?
         public let nonce: String?
+        
+        public init(email: String, userID: String, identityToken: Data?, authorizationCode: Data?, nonce: String?) {
+              self.email = email
+              self.userID = userID
+              self.identityToken = identityToken
+              self.authorizationCode = authorizationCode
+              self.nonce = nonce
+          }
     }
-
+    
     // MARK: - Authentication Subtype
     public struct Authentication: Codable, Equatable {
         
