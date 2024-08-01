@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct User: Codable, Equatable {
+public struct User: Codable, Equatable {
 
     // MARK: - Credentials Subtype
     struct Credentials: Codable, Equatable {
@@ -28,7 +28,7 @@ struct User: Codable, Equatable {
     }
 
     // MARK: - Authentication Subtype
-    struct Authentication: Codable, Equatable {
+    public struct Authentication: Codable, Equatable {
         
         typealias AccessToken = String
         typealias RefreshToken = String
@@ -64,7 +64,7 @@ struct User: Codable, Equatable {
             case creationDate = "creation_date"
         }
         
-        init(from decoder: Decoder) throws {
+        public init(from decoder: Decoder) throws {
             let container = try decoder.container(keyedBy: CodingKeys.self)
             self.init(accessToken: try container.decode(AccessToken.self, forKey: .accessToken),
                       refreshToken: try container.decode(RefreshToken.self, forKey: .refreshToken),
