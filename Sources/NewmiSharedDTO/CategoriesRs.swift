@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct CategoriesRs:Codable{
+public struct CategoriesRs: Codable{
     public var categories:[Category]?
     
     public init(categories: [Category]? = nil) {
@@ -15,12 +15,13 @@ public struct CategoriesRs:Codable{
     }
 }
 
-public struct Category:Codable{
-    public var id:UUID?
-    public var name:String?
-    public var categoryCode:String?
-    public var generalCategory:String?
-    public var isSelected:Bool?
+public struct Category: Codable, Equatable{
+    
+    public var id: UUID?
+    public var name: String?
+    public var categoryCode: String?
+    public var generalCategory: String?
+    public var isSelected: Bool?
     
     public init(id: UUID? = nil, name: String? = nil, categoryCode: String? = nil, generalCategory:String? = nil, isSelected:Bool? = nil) {
         self.id = id
