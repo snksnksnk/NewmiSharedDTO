@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct NewsRs:Codable{
+public struct NewsRs:Codable, Sendable{
     public var news:[News]?
     
     public init(news: [News]? = nil) {
@@ -15,7 +15,7 @@ public struct NewsRs:Codable{
     }
 }
 
-public struct News:Codable{
+public struct News:Codable, Sendable{
     public var id:String?
     public var title:String?
     public var date:String?

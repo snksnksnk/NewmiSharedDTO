@@ -15,7 +15,7 @@ public struct SourcesRs:Codable{
     }
 }
 
-public struct Source:Codable,Hashable{
+public struct Source:Codable,Hashable, Sendable{
     public static func == (lhs: Source, rhs: Source) -> Bool {
         lhs.id == rhs.id
     }
