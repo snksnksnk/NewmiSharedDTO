@@ -7,8 +7,8 @@
 
 import Foundation
 
-public struct SummaryRs:Codable{
-    public var summary:String?
+public struct SummaryRs: Codable, Sendable{
+    public var summary: String?
     
     public init(summary: String? = nil) {
         self.summary = summary

@@ -9,13 +9,13 @@ import Foundation
 
 import Foundation
 
-public struct PnChannelsRegisterRq:Codable{
-    public var deviceIdentif:String?
-    public var pnToken:String?
-    public var channels:[String]?
-    public var deviceOS:String?
+public struct PnChannelsRegisterRq: Codable, Sendable{
+    public var deviceIdentif: String?
+    public var pnToken: String?
+    public var channels: [String]?
+    public var deviceOS: String?
     
-    public init(deviceIdentif: String? = nil, pnToken:String? = nil, channels:[String]? = nil, deviceOS:String? = nil) {
+    public init(deviceIdentif: String? = nil, pnToken: String? = nil, channels: [String]? = nil, deviceOS: String? = nil) {
         self.deviceIdentif = deviceIdentif
         self.pnToken = pnToken
         self.channels = channels

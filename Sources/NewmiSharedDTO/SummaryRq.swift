@@ -7,8 +7,8 @@
 
 import Foundation
 
-public struct SummaryRq:Codable{
-    public var articleIds:[String]?
+public struct SummaryRq: Codable, Sendable{
+    public var articleIds: [String]?
     
     public init(articleIds: [String]? = nil) {
         self.articleIds = articleIds

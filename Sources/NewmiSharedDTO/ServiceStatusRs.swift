@@ -7,8 +7,8 @@
 
 import Foundation
 
-public struct ServiceStatusRs:Codable{
-    public var enabled:Bool?
+public struct ServiceStatusRs: Codable, Sendable{
+    public var enabled: Bool?
     
     public init(enabled: Bool? = nil) {
         self.enabled = enabled

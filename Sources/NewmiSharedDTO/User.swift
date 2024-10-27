@@ -7,17 +7,17 @@
 
 import Foundation
 
-public struct User: Codable, Equatable {
+public struct User: Codable, Equatable, Sendable {
 
     // MARK: - Credentials Subtype
-    struct Credentials: Codable, Equatable {
+    struct Credentials: Codable, Equatable, Sendable {
 
         // MARK: - Properties
         public var email: String
         public var password: String
     }
     
-    public struct Social: Codable, Equatable {
+    public struct Social: Codable, Equatable, Sendable {
         
         // MARK: - Properties
         public let email: String
@@ -36,7 +36,7 @@ public struct User: Codable, Equatable {
     }
     
     // MARK: - Authentication Subtype
-    public struct Authentication: Codable, Equatable {
+    public struct Authentication: Codable, Equatable, Sendable {
         
         public typealias AccessToken = String
         public typealias RefreshToken = String
