@@ -15,7 +15,7 @@ public struct NewsRs: Codable, Sendable{
     }
 }
 
-public struct News: Codable, Sendable{
+public struct News: Codable, Hashable, Sendable{
     public var id: String?
     public var title: String?
     public var date: String?
