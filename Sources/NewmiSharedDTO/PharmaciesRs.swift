@@ -30,8 +30,9 @@ public struct Pharmacy: Codable, Hashable, Identifiable, Sendable{
     public var address2: String?
     public var postCode: String?
     public var city: String?
+    public var generalCity: String?
     
-    public init(id: UUID? = nil, category: String? = nil, name: String? = nil, address: String? = nil, phoneOffice: String? = nil, phoneHome: String? = nil, email: String? = nil, address2: String? = nil, postCode: String? = nil, city: String? = nil) {
+    public init(id: UUID? = nil, category: String? = nil, name: String? = nil, address: String? = nil, phoneOffice: String? = nil, phoneHome: String? = nil, email: String? = nil, address2: String? = nil, postCode: String? = nil, city: String? = nil, generalCity: String? = nil) {
         self.id = id
         self.category = category
         self.name = name
@@ -42,5 +43,6 @@ public struct Pharmacy: Codable, Hashable, Identifiable, Sendable{
         self.address2 = address2
         self.postCode = postCode
         self.city = city
+        self.generalCity = generalCity
     }
 }
