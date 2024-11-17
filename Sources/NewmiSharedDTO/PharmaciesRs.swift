@@ -15,7 +15,7 @@ public struct PharmaciesRs: Codable, Sendable{
     }
 }
 
-public struct Pharmacy: Codable, Hashable, Sendable{
+public struct Pharmacy: Codable, Hashable, Identifiable, Sendable{
     public static func == (lhs: Pharmacy, rhs: Pharmacy) -> Bool {
         lhs.id == rhs.id
     }
