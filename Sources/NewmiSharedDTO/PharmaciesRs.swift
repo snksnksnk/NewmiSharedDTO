@@ -1,25 +1,16 @@
-//
-//  PharmaciesRs.swift
-//  NewmiSharedDTO
-//
-//  Created by Demetris Georgiou on 17/11/2024.
-//
-
 import Foundation
+import CoreGraphics
 
-public struct PharmaciesRs: Codable, Sendable{
-    public var pharmacies:[Pharmacy]?
-    
-    public init(pharmacies: [Pharmacy]? = nil) {
-        self.pharmacies = pharmacies
+public struct Coordinates: Codable, CustomStringConvertible, Equatable, Sendable, Hashable {
+    public var latitude: Double
+    public var longitude: Double
+
+    public var description: String {
+        "(\(latitude), \(longitude))"
     }
 }
 
-public struct Pharmacy: Codable, Hashable, Identifiable, Sendable{
-    public static func == (lhs: Pharmacy, rhs: Pharmacy) -> Bool {
-        lhs.id == rhs.id
-    }
-    
+public struct Pharmacy: Codable, Hashable, Identifiable, Sendable {
     public var id: UUID?
     public var category: String?
     public var name: String?
@@ -32,9 +23,9 @@ public struct Pharmacy: Codable, Hashable, Identifiable, Sendable{
     public var city: String?
     public var generalCity: String?
     public var distance: Double?
-
+    public var coordinates: Coordinates?
     
-    public init(id: UUID? = nil, category: String? = nil, name: String? = nil, address: String? = nil, phoneOffice: String? = nil, phoneHome: String? = nil, email: String? = nil, address2: String? = nil, postCode: String? = nil, city: String? = nil, generalCity: String? = nil, distance: Double? = nil) {
+    public init(id: UUID? = nil, category: String? = nil, name: String? = nil, address: String? = nil, phoneOffice: String? = nil, phoneHome: String? = nil, email: String? = nil, address2: String? = nil, postCode: String? = nil, city: String? = nil, generalCity: String? = nil, distance: Double? = nil, coordinates: Coordinates? = nil) {
         self.id = id
         self.category = category
         self.name = name
@@ -47,5 +38,6 @@ public struct Pharmacy: Codable, Hashable, Identifiable, Sendable{
         self.city = city
         self.generalCity = generalCity
         self.distance = distance
+        self.coordinates = coordinates
     }
 }
