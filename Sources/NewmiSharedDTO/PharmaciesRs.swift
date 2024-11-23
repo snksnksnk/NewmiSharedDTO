@@ -1,12 +1,22 @@
 import Foundation
 import CoreGraphics
 
+
+
 public struct Coordinates: Codable, CustomStringConvertible, Equatable, Sendable, Hashable {
     public var latitude: Double
     public var longitude: Double
 
     public var description: String {
         "(\(latitude), \(longitude))"
+    }
+}
+
+public struct PharmaciesRs: Codable, Sendable{
+    public var pharmacies:[Pharmacy]?
+    
+    public init(pharmacies: [Pharmacy]? = nil) {
+        self.pharmacies = pharmacies
     }
 }
 
