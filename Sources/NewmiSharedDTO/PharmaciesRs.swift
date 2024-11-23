@@ -10,6 +10,11 @@ public struct Coordinates: Codable, CustomStringConvertible, Equatable, Sendable
     public var description: String {
         "(\(latitude), \(longitude))"
     }
+    
+    public init(latitude: Double, longitude: Double) {
+        self.latitude = latitude
+        self.longitude = longitude  
+    }
 }
 
 public struct PharmaciesRs: Codable, Sendable{
