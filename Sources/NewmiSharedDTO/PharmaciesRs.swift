@@ -1,7 +1,4 @@
 import Foundation
-import CoreGraphics
-
-
 
 public struct Coordinates: Codable, CustomStringConvertible, Equatable, Sendable, Hashable {
     public var latitude: Double
