@@ -1,8 +1,8 @@
 import Foundation
 
 public struct Coordinates: Codable, CustomStringConvertible, Equatable, Sendable, Hashable {
-    public var latitude: Double
-    public var longitude: Double
+    public var latitude: Double?
+    public var longitude: Double?
 
     public var description: String {
         "(\(latitude), \(longitude))"
