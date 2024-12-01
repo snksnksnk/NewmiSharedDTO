@@ -8,7 +8,7 @@ public struct Coordinates: Codable, CustomStringConvertible, Equatable, Sendable
         "(\(latitude), \(longitude))"
     }
     
-    public init(latitude: Double, longitude: Double) {
+    public init(latitude: Double?, longitude: Double?) {
         self.latitude = latitude
         self.longitude = longitude  
     }
