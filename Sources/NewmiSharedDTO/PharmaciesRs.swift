@@ -52,4 +52,8 @@ public struct Pharmacy: Codable, Hashable, Identifiable, Sendable {
         self.distance = distance
         self.coordinates = coordinates
     }
+    
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
 }
