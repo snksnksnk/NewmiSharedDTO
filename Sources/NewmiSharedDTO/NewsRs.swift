@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct NewsRs: Codable, Sendable{
+public struct NewsRs: Codable, Sendable, Hashable{
     public var news:[News]?
     
     public init(news: [News]? = nil) {
@@ -16,6 +16,10 @@ public struct NewsRs: Codable, Sendable{
 }
 
 public struct News: Codable, Hashable, Sendable{
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
     public var id: String?
     public var title: String?
     public var date: String?
@@ -23,14 +27,14 @@ public struct News: Codable, Hashable, Sendable{
     public var url: String?
     public var source: Source?
     public var newsType: String?
-    public var categories: String?
+    public var categories: Category?
     public var imageUrl: String?
     public var articleText: [String]?
     public var videoUrl: String?
     public var similar: [News]?
     public var media: [String]?
     
-    public init(id: String? = nil, title: String? = nil, date: String? = nil, dateTime:Date? = nil, url: String? = nil, source: Source? = nil, newsType: String? = nil, categories: String? = nil, imageUrl: String? = nil, articleText: [String]? = nil, videoUrl: String? = nil, similar: [News]? = nil, media: [String]? = nil) {
+    public init(id: String? = nil, title: String? = nil, date: String? = nil, dateTime:Date? = nil, url: String? = nil, source: Source? = nil, newsType: String? = nil, categories: Category? = nil, imageUrl: String? = nil, articleText: [String]? = nil, videoUrl: String? = nil, similar: [News]? = nil, media: [String]? = nil) {
         self.id = id
         self.title = title
         self.date = date
