@@ -30,16 +30,18 @@ public struct Source: Codable, Hashable, Sendable{
     public var language: String?
     public var countryCode: String?
     public var sourceCode: String?
+    public var sourceUrl: String?
     public var isSelected: Bool?
     public var lastUpdate: Date?
     public var status: SourceStatus?
     
-    public init(id: UUID? = nil, name: String? = nil, language: String? = nil, countryCode: String? = nil, sourceCode: String? = nil, isSelected: Bool? = nil, lastUpdate: Date? = nil, status: SourceStatus? = nil) {
+    public init(id: UUID? = nil, name: String? = nil, language: String? = nil, countryCode: String? = nil, sourceCode: String? = nil, sourceURL: String? = nil, isSelected: Bool? = nil, lastUpdate: Date? = nil, status: SourceStatus? = nil) {
         self.id = id
         self.name = name
         self.language = language
         self.countryCode = countryCode
         self.sourceCode = sourceCode
+        self.sourceUrl = sourceURL
         self.isSelected = isSelected
         self.lastUpdate = lastUpdate
         self.status = status
