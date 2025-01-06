@@ -9,9 +9,11 @@ import Foundation
 
 public struct NewsRs: Codable, Sendable, Hashable{
     public var news:[News]?
-    
-    public init(news: [News]? = nil) {
+    public var featured: [News]?
+
+    public init(news: [News]? = nil, featured: [News]? = nil) {
         self.news = news
+        self.featured = featured
     }
 }
 
@@ -32,10 +34,9 @@ public struct News: Codable, Hashable, Sendable{
     public var articleText: [String]?
     public var videoUrl: String?
     public var similar: [News]?
-    public var featured: [News]?
     public var media: [String]?
     
-    public init(id: String? = nil, title: String? = nil, date: String? = nil, dateTime:Date? = nil, url: String? = nil, source: Source? = nil, newsType: String? = nil, categories: Category? = nil, imageUrl: String? = nil, articleText: [String]? = nil, videoUrl: String? = nil, similar: [News]? = nil, featured: [News]? = nil, media: [String]? = nil) {
+    public init(id: String? = nil, title: String? = nil, date: String? = nil, dateTime:Date? = nil, url: String? = nil, source: Source? = nil, newsType: String? = nil, categories: Category? = nil, imageUrl: String? = nil, articleText: [String]? = nil, videoUrl: String? = nil, similar: [News]? = nil, media: [String]? = nil) {
         self.id = id
         self.title = title
         self.date = date
@@ -48,7 +49,6 @@ public struct News: Codable, Hashable, Sendable{
         self.articleText = articleText
         self.videoUrl = videoUrl
         self.similar = similar
-        self.featured = featured
         self.media = media
     }
 }
