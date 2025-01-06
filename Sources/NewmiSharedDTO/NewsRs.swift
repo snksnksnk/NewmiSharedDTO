@@ -35,8 +35,9 @@ public struct News: Codable, Hashable, Sendable{
     public var videoUrl: String?
     public var similar: [News]?
     public var media: [String]?
+    public var featuredScore: Double?
     
-    public init(id: String? = nil, title: String? = nil, date: String? = nil, dateTime:Date? = nil, url: String? = nil, source: Source? = nil, newsType: String? = nil, categories: Category? = nil, imageUrl: String? = nil, articleText: [String]? = nil, videoUrl: String? = nil, similar: [News]? = nil, media: [String]? = nil) {
+    public init(id: String? = nil, title: String? = nil, date: String? = nil, dateTime:Date? = nil, url: String? = nil, source: Source? = nil, newsType: String? = nil, categories: Category? = nil, imageUrl: String? = nil, articleText: [String]? = nil, videoUrl: String? = nil, similar: [News]? = nil, media: [String]? = nil, featuredScore: Double? = nil) {
         self.id = id
         self.title = title
         self.date = date
@@ -50,5 +51,6 @@ public struct News: Codable, Hashable, Sendable{
         self.videoUrl = videoUrl
         self.similar = similar
         self.media = media
+        self.featuredScore = featuredScore
     }
 }
