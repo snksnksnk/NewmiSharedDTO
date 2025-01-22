@@ -17,6 +17,16 @@ public struct User: Codable, Equatable, Sendable {
         public var password: String
     }
     
+    public struct Details: Codable, Equatable, Sendable {
+        public let firstName: String?
+        public let lastName: String?
+        
+        public init(firstName: String? = nil, lastName: String? = nil) {
+            self.firstName = firstName
+            self.lastName = lastName
+        }
+    }
+    
     public struct Social: Codable, Equatable, Sendable {
         
         // MARK: - Properties
