@@ -18,8 +18,8 @@ public struct User: Codable, Equatable, Sendable {
     }
     
     public struct Details: Codable, Equatable, Sendable {
-        public let firstName: String?
-        public let lastName: String?
+        public var firstName: String?
+        public var lastName: String?
         
         public init(firstName: String? = nil, lastName: String? = nil) {
             self.firstName = firstName
