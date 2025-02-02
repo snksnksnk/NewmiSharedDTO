@@ -36,8 +36,9 @@ public struct News: Codable, Hashable, Sendable{
     public var similar: [News]?
     public var media: [String]?
     public var featuredScore: Double?
+    public var bookmark: BookmarkStatus?
     
-    public init(id: String? = nil, title: String? = nil, date: String? = nil, dateTime:Date? = nil, url: String? = nil, source: Source? = nil, newsType: String? = nil, categories: Category? = nil, imageUrl: String? = nil, articleText: [String]? = nil, videoUrl: String? = nil, similar: [News]? = nil, media: [String]? = nil, featuredScore: Double? = nil) {
+    public init(id: String? = nil, title: String? = nil, date: String? = nil, dateTime:Date? = nil, url: String? = nil, source: Source? = nil, newsType: String? = nil, categories: Category? = nil, imageUrl: String? = nil, articleText: [String]? = nil, videoUrl: String? = nil, similar: [News]? = nil, media: [String]? = nil, featuredScore: Double? = nil, bookmark: BookmarkStatus? = nil) {
         self.id = id
         self.title = title
         self.date = date
@@ -52,5 +53,6 @@ public struct News: Codable, Hashable, Sendable{
         self.similar = similar
         self.media = media
         self.featuredScore = featuredScore
+        self.bookmark = bookmark ?? .notBookmarked
     }
 }
