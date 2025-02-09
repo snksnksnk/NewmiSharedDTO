@@ -11,9 +11,9 @@ public enum PnStatus: String, Codable, Sendable {
 }
 
 public struct PnStatusRs: Codable, Hashable, Sendable {
-    public var status: BookmarkStatus?
+    public var status: PnStatus?
     
-    public init(status: BookmarkStatus? = nil) {
+    public init(status: PnStatus? = nil) {
         self.status = status
     }
 }
