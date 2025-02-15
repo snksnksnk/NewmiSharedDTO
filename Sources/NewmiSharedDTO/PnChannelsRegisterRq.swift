@@ -7,8 +7,6 @@
 
 import Foundation
 
-import Foundation
-
 public struct PnChannelsRegisterRq: Codable, Sendable{
     public var deviceIdentif: UUID?
     public var pnToken: String?
