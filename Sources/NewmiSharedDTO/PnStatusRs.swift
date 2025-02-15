@@ -12,8 +12,10 @@ public enum PnStatus: String, Codable, Sendable {
 
 public struct PnStatusRs: Codable, Hashable, Sendable {
     public var status: PnStatus?
+    public var timeline: [Int]?
     
-    public init(status: PnStatus? = nil) {
+    public init(status: PnStatus? = nil, timeline: [Int]? = nil) {
         self.status = status
+        self.timeline = timeline
     }
 }
