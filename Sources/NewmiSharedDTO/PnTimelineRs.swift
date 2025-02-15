@@ -8,9 +8,9 @@
 import Foundation
 
 public struct PnTimelineRs: Codable, Sendable{
-    public var timeLine: [Int]?
+    public var timeLine: [CGFloat]?
     
-    public init(timeLine: [Int]? = nil) {
+    public init(timeLine: [CGFloat]? = nil) {
         self.timeLine = timeLine
     }
 }
