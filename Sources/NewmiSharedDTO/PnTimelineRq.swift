@@ -1,13 +1,13 @@
 //
-//  PnTimelineRs.swift
+//  PnTimelineRq.swift
 //  NewmiSharedDTO
 //
-//  Created by Demetris Georgiou on 15/02/2025.
+//  Created by Demetris Georgiou on 16/02/2025.
 //
 
 import Foundation
 
-public struct PnTimelineRs: Codable, Sendable{
+public struct PnTimelineRq: Codable, Sendable{
     
     public var timeLine: [CGFloat]?
     public var status: String?
